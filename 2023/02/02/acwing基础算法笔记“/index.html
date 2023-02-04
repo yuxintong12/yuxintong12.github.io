@@ -6,22 +6,26 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yuxiaotianyu.github.io">
-  <title>leetcode经典题第一弹 | 小童的小窝</title>
+  <title>acwing基础算法笔记 | 小童的小窝</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="😏简单但是出人意料的算法题这个主要对我平常所做的oj题进行总结，并对方法进行归类。，并对算法进行评价。从而得到最目前水平上认为的最优解、  迟迟钟鼓初长夜，耿耿星河欲曙天 ​                                                           ——《长恨歌》  1.消失的数字 基本思路: 1.思路一（暴力）创建一个元素个数为n + 1的数组以便记">
+  <meta name="description" content="🫥acwing基础算法笔记 &lt;丘比特，大梦想&gt;                                                                                         那些不能杀死我们的，必将使我们变得强大       ——尼采 😏算法目录😏 1.快速排序2.归并排序3.二分查找(1)整数二分(2)浮点数二分 [TOC]">
 <meta property="og:type" content="article">
-<meta property="og:title" content="leetcode经典题第一弹">
-<meta property="og:url" content="http://yuxiaotianyu.github.io/2023/01/30/leetcode%E7%BB%8F%E5%85%B8%E9%A2%98%E7%AC%AC%E4%B8%80%E5%BC%B9/index.html">
+<meta property="og:title" content="acwing基础算法笔记">
+<meta property="og:url" content="http://yuxiaotianyu.github.io/2023/02/02/acwing%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E2%80%9C/index.html">
 <meta property="og:site_name" content="小童的小窝">
-<meta property="og:description" content="😏简单但是出人意料的算法题这个主要对我平常所做的oj题进行总结，并对方法进行归类。，并对算法进行评价。从而得到最目前水平上认为的最优解、  迟迟钟鼓初长夜，耿耿星河欲曙天 ​                                                           ——《长恨歌》  1.消失的数字 基本思路: 1.思路一（暴力）创建一个元素个数为n + 1的数组以便记">
+<meta property="og:description" content="🫥acwing基础算法笔记 &lt;丘比特，大梦想&gt;                                                                                         那些不能杀死我们的，必将使我们变得强大       ——尼采 😏算法目录😏 1.快速排序2.归并排序3.二分查找(1)整数二分(2)浮点数二分 [TOC]">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://img.wxcha.com/file/201809/17/fadacbde05.jpeg">
-<meta property="og:image" content="http://yuxiaotianyu.github.io/2023/01/30/leetcode%E7%BB%8F%E5%85%B8%E9%A2%98%E7%AC%AC%E4%B8%80%E5%BC%B9/blog/source_posts/leetcode%E7%BB%8F%E5%85%B8%E9%A2%98%E7%AC%AC%E4%B8%80%E5%BC%B9/20230130222208.png">
-<meta property="article:published_time" content="2023-01-30T13:18:17.000Z">
-<meta property="article:modified_time" content="2023-02-01T16:18:24.919Z">
+<meta property="og:image" content="https://pics5.baidu.com/feed/5366d0160924ab180be73f3305f5ceca7a890bd3.jpeg@f_auto?token=edbb07bfb53a9475e9a99db822ee5fa4">
+<meta property="og:image" content="http://yuxiaotianyu.github.io/2023/02/02/acwing%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E2%80%9C/Users/Lenovo/AppData/Roaming/Typora/typora-user-images/image-20230204172450628.png">
+<meta property="og:image" content="http://yuxiaotianyu.github.io/2023/02/02/acwing%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E2%80%9C/Users/Lenovo/AppData/Roaming/Typora/typora-user-images/image-20230204174457344.png">
+<meta property="og:image" content="http://yuxiaotianyu.github.io/2023/02/02/acwing%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E2%80%9C/Users/Lenovo/AppData/Roaming/Typora/typora-user-images/image-20230204175452424.png">
+<meta property="og:image" content="http://yuxiaotianyu.github.io/2023/02/02/acwing%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E2%80%9C/Users/Lenovo/AppData/Roaming/Typora/typora-user-images/image-20230204224940500.png">
+<meta property="og:image" content="http://yuxiaotianyu.github.io/2023/02/02/acwing%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E2%80%9C/Users/Lenovo/AppData/Roaming/Typora/typora-user-images/image-20230204231430373.png">
+<meta property="article:published_time" content="2023-02-02T12:08:39.000Z">
+<meta property="article:modified_time" content="2023-02-04T15:16:00.024Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://img.wxcha.com/file/201809/17/fadacbde05.jpeg">
+<meta name="twitter:image" content="https://pics5.baidu.com/feed/5366d0160924ab180be73f3305f5ceca7a890bd3.jpeg@f_auto?token=edbb07bfb53a9475e9a99db822ee5fa4">
   
     <link rel="alternative" href="/atom.xml" title="小童的小窝" type="application/atom+xml">
   
@@ -173,20 +177,20 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-leetcode经典题第一弹" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-acwing基础算法笔记“" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      leetcode经典题第一弹
+      acwing基础算法笔记
     </h1>
   
 
         
-        <a href="/2023/01/30/leetcode%E7%BB%8F%E5%85%B8%E9%A2%98%E7%AC%AC%E4%B8%80%E5%BC%B9/" class="archive-article-date">
-  	<time datetime="2023-01-30T13:18:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-01-30</time>
+        <a href="/2023/02/02/acwing%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E2%80%9C/" class="archive-article-date">
+  	<time datetime="2023-02-02T12:08:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-02-02</time>
 </a>
         
       </header>
@@ -194,30 +198,68 @@
     <div class="article-entry" itemprop="articleBody">
       
         <blockquote>
-<h1 id="😏简单但是出人意料的算法题"><a href="#😏简单但是出人意料的算法题" class="headerlink" title="😏简单但是出人意料的算法题"></a>😏简单但是出人意料的算法题</h1><p>这个主要对我平常所做的oj题进行总结，并对方法进行归类。，并对算法进行评价。从而得到最目前水平上认为的最优解、</p>
-<p><img src="https://img.wxcha.com/file/201809/17/fadacbde05.jpeg"></p>
-<p><font color="4715169" size="5">迟迟钟鼓初长夜，耿耿星河欲曙天</font></p>
-<p>​                                                           <font color="4715169" size="5">——《长恨歌》</font></p>
+<h1 id="🫥acwing基础算法笔记"><a href="#🫥acwing基础算法笔记" class="headerlink" title="🫥acwing基础算法笔记"></a>🫥acwing基础算法笔记</h1><p> &lt;丘比特，大梦想&gt;                                                                                       </p>
+<p><img src="https://pics5.baidu.com/feed/5366d0160924ab180be73f3305f5ceca7a890bd3.jpeg@f_auto?token=edbb07bfb53a9475e9a99db822ee5fa4"></p>
+<p><font color="Brown" size="4">那些不能杀死我们的，必将使我们变得强大       ——尼采</font></p>
+<p><strong>😏算法目录😏</strong></p>
+<h2 id="1-快速排序"><a href="#1-快速排序" class="headerlink" title="1.快速排序"></a>1.快速排序</h2><h2 id="2-归并排序"><a href="#2-归并排序" class="headerlink" title="2.归并排序"></a>2.归并排序</h2><h2 id="3-二分查找"><a href="#3-二分查找" class="headerlink" title="3.二分查找"></a>3.二分查找</h2><h3 id="1-整数二分"><a href="#1-整数二分" class="headerlink" title="(1)整数二分"></a>(1)整数二分</h3><h3 id="2-浮点数二分"><a href="#2-浮点数二分" class="headerlink" title="(2)浮点数二分"></a>(2)浮点数二分</h3></blockquote>
+<p>[TOC]</p>
+<h1 id="🐻前言"><a href="#🐻前言" class="headerlink" title="🐻前言"></a>🐻前言</h1><p>本篇文章主要针对在acwing算法课中的一些困惑和重要思路进行整理，从而便于复习提升。</p>
+<h1 id="1-快速排序-1"><a href="#1-快速排序-1" class="headerlink" title="1.快速排序"></a>1.快速排序</h1><p>快速排序是一个比较经典的算法其主要是利用分冶的思想对总区间进行无限细分并对每个小区间进行调整,从而达到有序的目的。</p>
+<p><strong>具体实现及分析：</strong></p>
+<h3 id="1-算法基本结构"><a href="#1-算法基本结构" class="headerlink" title="(1)算法基本结构"></a>(1)算法基本结构</h3><p><strong>函数名称以及参数对象：</strong></p>
+<p><strong>名称：</strong>函数接口的名字尽量与quick sort有关联缩写也好，要让人一读就能明白函数接口的意义</p>
+<p><strong>参数：</strong>因为这里来主要对数进行排序来演示所以参数就直接设置为整型指针，和左右边界下标.因为是传址调用直接更改数组并不需要返回什么参数所以就设为void</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">my_qsort</span><span class="params">(<span class="type">int</span>* arr，<span class="type">int</span> l,<span class="type">int</span> r)</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>算法主要模式：</strong></p>
+<p>主要实现方式是递归，值得注意的是在递归的时候要提前设好跳出条件，即将区间细分完或者子区间待细分序列只剩下一个数的时候就要进行跳出了，如若不然则会死递归导致栈溢出。所以综上我们递归的基准条件就已经确定了<code>当递归传入区间中只有一个或0个的时候跳出</code>。</p>
+<blockquote>
+<p>简单来说就是当数组只有一个数或压根就是空的时候不用对数组进行排序了，因为他本来就是有序的</p>
 </blockquote>
-<h1 id="1-消失的数字"><a href="#1-消失的数字" class="headerlink" title="1.消失的数字"></a>1.消失的数字</h1><p><img src="/2023/01/30/leetcode%E7%BB%8F%E5%85%B8%E9%A2%98%E7%AC%AC%E4%B8%80%E5%BC%B9/blog\source_posts\leetcode经典题第一弹\20230130222208.png"></p>
-<p><strong>基本思路:</strong></p>
-<h2 id="1-思路一（暴力）"><a href="#1-思路一（暴力）" class="headerlink" title="1.思路一（暴力）"></a>1.思路一（暴力）</h2><p>创建一个元素个数为n + 1的数组以便记录数字是否出现，根据记录数组1&#x2F;0的情况来判断。即遍历传入数组的同时开始记录。</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">missingNumber</span><span class="params">(<span class="type">int</span>* nums, <span class="type">int</span> numsSize)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> i = <span class="number">0</span>;</span><br><span class="line">    <span class="type">int</span>  *p = (<span class="type">int</span> *)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="type">int</span>) * (numsSize + <span class="number">1</span>));<span class="comment">//动态开辟数组</span></span><br><span class="line">    <span class="keyword">for</span>(i = <span class="number">0</span>;i &lt; numsSize + <span class="number">1</span>;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        p[i] = <span class="number">0</span>;<span class="comment">//初始化动态数组</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(i = <span class="number">0</span>;i &lt; numsSize;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        p[nums[i]]++;<span class="comment">//对对应位置的数进行记录</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(i = <span class="number">0</span>;i &lt; numsSize + <span class="number">1</span>;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(!p[i])</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span> i;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">free</span>(p);</span><br><span class="line">    p = <span class="literal">NULL</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(l &gt;= r)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">return</span>;<span class="comment">//因为返回值是空类型所以并不需要返回什么具体的值</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>因为计算机记不住不智能，只能将动态开辟数组当作记录版，记录数字是否出现过。</p>
-<h2 id="2-排序后比较"><a href="#2-排序后比较" class="headerlink" title="2.排序后比较"></a>2.排序后比较</h2><p>即将数组先排成有序序列，因为是有序的所以要找出缺失的那个数字，就要用这个序列最大数从序列的最大开始比较如果比不上就会返回。</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">cmp</span><span class="params">(<span class="type">const</span> <span class="type">void</span> * e1,<span class="type">const</span> <span class="type">void</span> * e2)</span><span class="comment">//快排序的比较函数</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">return</span> *(<span class="type">int</span> *)e1 - *(<span class="type">int</span> *)e2;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">missingNumber</span><span class="params">(<span class="type">int</span>* nums, <span class="type">int</span> numsSize)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> i = <span class="number">0</span>;</span><br><span class="line">    qsort(nums,numsSize,<span class="keyword">sizeof</span>(nums[<span class="number">0</span>]),cmp);<span class="comment">//对序列进行排序</span></span><br><span class="line">    <span class="keyword">for</span>(i = numsSize;i &gt; <span class="number">0</span>;i--)<span class="comment">//从最大的数开始一一对比</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(i != nums[i - <span class="number">1</span>])</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span> i;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>递归进行的主要操作：</strong></p>
+<p>递归基准条件已经确定了，那么就应该确定一下具体操作了，我们先从数据量较小的看起：</p>
+<p><img src="/2023/02/02/acwing%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E2%80%9C/Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20230204172450628.png" alt="image-20230204172450628"></p>
+<p>然后咱们再把数据增加一下：</p>
+<p><img src="/2023/02/02/acwing%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E2%80%9C/Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20230204174457344.png" alt="image-20230204174457344"></p>
+<p>仅仅是这点数据还是无法体现分治法的优点，下面我们加大亿点难度：</p>
+<p><img src="/2023/02/02/acwing%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E2%80%9C/Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20230204175452424.png" alt="image-20230204175452424"></p>
+<p><strong>1.选取基准值定义相关变量对应的值以及移动左右边界的临时变量：</strong></p>
+<p>一般选取最左边，最右边，以及中间值</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> i = l - <span class="number">1</span>;<span class="comment">//一开始要将临时变量指向数组外边，因为后边要利用do—while语句进行指向元素与基准值进行比较</span></span><br><span class="line"><span class="type">int</span> j = r + <span class="number">1</span>;<span class="comment">//比较后确定了关系进行交换。</span></span><br><span class="line"><span class="type">int</span> x = arr[l + r &gt;&gt; <span class="number">1</span>]<span class="comment">//这里选取中间值作为基准</span></span><br></pre></td></tr></table></figure>
 
-<p>但是这个算法的时间复杂度是O(n)</p>
-<h2 id="3-十分不可思议的算法"><a href="#3-十分不可思议的算法" class="headerlink" title="3.十分不可思议的算法"></a>3.十分不可思议的算法</h2><p>首先我们要了解到按位异或操作符的几个特性，即</p>
-<h3 id="1-第一个特性：相同为0相异为1"><a href="#1-第一个特性：相同为0相异为1" class="headerlink" title="1.第一个特性：相同为0相异为1"></a>1.第一个特性：相同为0相异为1</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> x = <span class="number">3</span>;</span><br><span class="line"><span class="type">int</span> y  = <span class="number">3</span>;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>, x ^ y)；<span class="comment">//结果是0</span></span><br></pre></td></tr></table></figure>
+<p><strong>2.区分区间不符合区间关系的进行交换</strong></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span>(i &lt; j)<span class="comment">//当指向左右的变量重合或者是交错的时候，就要跳出</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">//确定指向左边的是不是小于基准值</span></span><br><span class="line">    <span class="keyword">do</span></span><br><span class="line">    &#123;</span><br><span class="line">        i++;<span class="comment">//这便于理解上边的l - 1的操作了,因为上来就要移动。</span></span><br><span class="line">	&#125;<span class="keyword">while</span>(arr[i] &lt; x);</span><br><span class="line">    <span class="comment">//确定是不是大于基准值</span></span><br><span class="line">    <span class="keyword">do</span></span><br><span class="line">    &#123;</span><br><span class="line">        j++;</span><br><span class="line">	&#125;<span class="keyword">while</span>(arr[j] &gt; x);</span><br><span class="line">    <span class="comment">//判断是否未相遇或者是错过</span></span><br><span class="line">    <span class="keyword">if</span>(i &lt; j)<span class="comment">//因为前文已经进行了移动所以要对while条件在进行判断</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//交换</span></span><br><span class="line">        swap(arr[i],arr[j]);<span class="comment">//c++库中特有的函数</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h3 id="2-第二个特性：-支持交换律"><a href="#2-第二个特性：-支持交换律" class="headerlink" title="2.第二个特性： 支持交换律"></a>2.第二个特性： 支持交换律</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//请看下面一段代码</span></span><br><span class="line"><span class="type">int</span> a = <span class="number">2</span>；</span><br><span class="line"><span class="type">int</span> b = <span class="number">0</span>;</span><br><span class="line"><span class="type">int</span> c  = <span class="number">3</span>;</span><br><span class="line"><span class="comment">//请判断下面的表达式</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>,a ^ b ^ c);</span><br><span class="line"><span class="type">int</span> x = c ^ a;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>,x ^ b);</span><br><span class="line"><span class="comment">//其实上边两个输出结果是一样的</span></span><br><span class="line"><span class="comment">//上边两个表达式其实在表义上并无不同</span></span><br><span class="line"><span class="comment">//将表达式进行替换交换可以发现x ^ b   =&gt;  c ^ a ^ b =&gt; a ^ b ^c </span></span><br></pre></td></tr></table></figure>
+<p><strong>3.确定递归传入数据来执行递归操作</strong></p>
+<p>因为分治法是对区间不断细分的递归手段所以要确定好传入数据，以及对应递归区间的界限，因为是不断分为两块，所以要对所剩的两个区间分别进行细分所以要进行两次递归。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">my_qsort(arr,l,j)<span class="comment">//这里的j代表第一块区间的边界</span></span><br><span class="line">my_qsort(arr,j+ <span class="number">1</span>,j)<span class="comment">//这里的j+1代表右边界的起点</span></span><br></pre></td></tr></table></figure>
 
-<p>知道了上述特性我们就不难想出既然按位异或可以对相同项进行消除那么，我们不妨将n从最高位进行递减操作并将每一个得到的数对已有数列进行异或操作最后剩下的就是缺失的。，代码如下：</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">missingNumber</span><span class="params">(<span class="type">int</span>* nums, <span class="type">int</span> numsSize)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">//接收异或结果的临时变量</span></span><br><span class="line">    <span class="type">int</span> x = <span class="number">0</span>;</span><br><span class="line">    <span class="comment">//循环调整变量</span></span><br><span class="line">    <span class="type">int</span> i= <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(i = numsSize;i &gt; <span class="number">0</span> ;i--)</span><br><span class="line">    &#123;</span><br><span class="line">       <span class="keyword">if</span>(!x)</span><br><span class="line">       &#123;</span><br><span class="line">           x = nums[i - <span class="number">1</span>] ^ i;<span class="comment">//因为一开始的x是具有0这个数值的所以要进行赋初始值</span></span><br><span class="line">       &#125;</span><br><span class="line">       <span class="keyword">else</span></span><br><span class="line">       &#123;</span><br><span class="line">           x ^= nums[i - <span class="number">1</span>] ^ i;<span class="comment">//对数组数进行异或操作。</span></span><br><span class="line">       &#125;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> x;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h1 id="2-归并排序-1"><a href="#2-归并排序-1" class="headerlink" title="2.归并排序"></a>2.归并排序</h1><p>其实归并排序的思想与上边的思想如出一辙，也是分治的思想将数组分成两个区间，无限细分成两个区间只剩下一个的时候对两个序列进行比较合并到临时数组中，然后在最后将数据一点一点读入原来数组。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//临时数组尽量开大点</span></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N = <span class="number">100010</span>；</span><br><span class="line"><span class="type">int</span> tem[N] = &#123;<span class="number">0</span>&#125;;</span><br><span class="line"><span class="type">void</span> <span class="title function_">mer_sort</span><span class="params">(<span class="type">int</span> * p,<span class="type">int</span> l,<span class="type">int</span> r)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">//确定基准值，中间</span></span><br><span class="line">    mid = l + r &gt;&gt; <span class="number">1</span>;</span><br><span class="line">    <span class="comment">//进行细分区间</span></span><br><span class="line">   <span class="comment">//对从中间分开的区间分别进行细分</span></span><br><span class="line">    mer_sort(p,l,mid);</span><br><span class="line">    mer_sort(p,mid + <span class="number">1</span>,r);</span><br><span class="line">    <span class="comment">//设定移动的临时变量，以及重排列的变量</span></span><br><span class="line">    <span class="type">int</span> i = l;<span class="comment">//每个区间的起始</span></span><br><span class="line">    <span class="type">int</span> j = mid + <span class="number">1</span>;</span><br><span class="line">    <span class="type">int</span> k = <span class="number">0</span>;<span class="comment">//重排变量</span></span><br><span class="line">    <span class="comment">//开始比较存放，这时可以将两个区间看作两个单独的数组，所以这里的合并的条件就是边界问题了</span></span><br><span class="line">    <span class="keyword">while</span>(i &lt;= mid &amp;&amp; j &lt;= r)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(p[i] &gt; p[j])</span><br><span class="line">        &#123;</span><br><span class="line">            tem[k++] = p[j++];</span><br><span class="line">		&#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            tem[k++] = p[i++];</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">    <span class="comment">//因为有可能有剩的所以要进行边界判断，然后进行拼接</span></span><br><span class="line">    <span class="keyword">while</span>(i &lt;= mid)</span><br><span class="line">    &#123;</span><br><span class="line">        tem[k++] = p[i++];</span><br><span class="line">	&#125;</span><br><span class="line">    <span class="keyword">while</span>(j &lt;= r)</span><br><span class="line">    &#123;</span><br><span class="line">        tem[k++] = p[j++];</span><br><span class="line">	&#125;</span><br><span class="line">    <span class="comment">//将tem的数从当前递归的左边界进行拼接</span></span><br><span class="line">    <span class="keyword">for</span>(i = l，j = <span class="number">0</span>;i &lt;= r;i++,j++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//进行读入</span></span><br><span class="line">        p[i] = tem[j];</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>![](D:\blog\source_posts\leetcode经典题第一弹\屏幕截图 2023-02-02 001552.png)</p>
+<h1 id="2-二分查找"><a href="#2-二分查找" class="headerlink" title="2.二分查找"></a>2.二分查找</h1><p>二分重要的是找到那个分区的条件，即答案所处区间和答案不在的区间的分界。其实二分说简单也简单，说不简单，有时候你还真想不到。大家可能都做过猜数字这个小游戏，或者是数字炸弹，一般都是用二分法来猜的，因为这样能一下排除剩下的一半。</p>
+<p>但是在编程中大家有时候根本不敢用，因为动不动就数组越界了。让人很崩溃。但是，今天我两个模板便能解决你的苦恼让你大呼过瘾。</p>
+<p>例如：</p>
+<p><img src="/2023/02/02/acwing%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E2%80%9C/Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20230204224940500.png" alt="image-20230204224940500"></p>
+<blockquote>
+<p>这题就是利用二分把左右边界找到：</p>
+<p>如： 1，2，2，3，3，4</p>
+<p>如果我要查找2的话那么就要返回1 ，2</p>
+<p>如果4的话则5，5.</p>
+<p>如果没有的话-1，-1</p>
+</blockquote>
+<p><strong>模板：</strong></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//判断是否符合某种能够缩小答案空间的条件</span></span><br><span class="line"><span class="type">bool</span> <span class="title function_">check</span><span class="params">(<span class="type">int</span> x)</span>……</span><br><span class="line"><span class="type">int</span> <span class="title function_">half_sort</span><span class="params">(<span class="type">int</span> l,<span class="type">int</span> r)</span><span class="comment">//适合进行极致向右进行右边界查找</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">while</span>(l &lt; r)<span class="comment">//当两个重合的时候跳出</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">int</span> mid = l + r &gt;&gt; <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">if</span>(chaeck(x))<span class="comment">//注意这是你自己画图判断答案区间的条件</span></span><br><span class="line">        &#123;</span><br><span class="line">            r = mid;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            l = mid + <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">	&#125;</span><br><span class="line">    <span class="keyword">return</span> l;<span class="comment">//因为会重合所以返回那个都一样</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="type">int</span> <span class="title function_">half_sort1</span><span class="params">(<span class="type">int</span> l,<span class="type">int</span> r)</span></span><br><span class="line">&#123;</span><br><span class="line">     <span class="keyword">while</span>(l &lt; r)<span class="comment">//当两个重合的时候跳出</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">int</span> mid = l + r &gt;&gt; <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">if</span>(chaeck(x))<span class="comment">//注意这是你自己画图判断答案区间的条件</span></span><br><span class="line">        &#123;</span><br><span class="line">            l = mid;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            r = mid - <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">	&#125;</span><br><span class="line">    <span class="keyword">return</span> l;<span class="comment">//因为会重合所以返回那个都一样</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>注意：其中的if条件根据自己理解进行调整，即预期区间缩小来确定</p>
+<p><img src="/2023/02/02/acwing%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E2%80%9C/Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20230204231430373.png" alt="image-20230204231430373"></p>
+<p><strong>二分虽好，可不要贪杯。</strong></p>
+<h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>愿诸君可以未来乘风破浪</p>
 
       
 
@@ -307,7 +349,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yuxiaotianyu.github.io/2023/01/30/leetcode%E7%BB%8F%E5%85%B8%E9%A2%98%E7%AC%AC%E4%B8%80%E5%BC%B9/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yuxiaotianyu.github.io/2023/02/02/acwing%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E2%80%9C/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -321,18 +363,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2023/02/02/acwing%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E2%80%9C/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          acwing基础算法笔记
-        
-      </div>
-    </a>
   
-  
-    <a href="/2023/01/30/%E5%9F%BA%E6%9C%AC%E7%AE%97%E6%B3%95/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">基本算法</div>
+    <a href="/2023/01/30/leetcode%E7%BB%8F%E5%85%B8%E9%A2%98%E7%AC%AC%E4%B8%80%E5%BC%B9/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">leetcode经典题第一弹</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -359,7 +392,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%F0%9F%98%8F%E7%AE%80%E5%8D%95%E4%BD%86%E6%98%AF%E5%87%BA%E4%BA%BA%E6%84%8F%E6%96%99%E7%9A%84%E7%AE%97%E6%B3%95%E9%A2%98"><span class="toc-number">1.</span> <span class="toc-text">😏简单但是出人意料的算法题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#1-%E6%B6%88%E5%A4%B1%E7%9A%84%E6%95%B0%E5%AD%97"><span class="toc-number">2.</span> <span class="toc-text">1.消失的数字</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E6%80%9D%E8%B7%AF%E4%B8%80%EF%BC%88%E6%9A%B4%E5%8A%9B%EF%BC%89"><span class="toc-number">2.1.</span> <span class="toc-text">1.思路一（暴力）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E6%8E%92%E5%BA%8F%E5%90%8E%E6%AF%94%E8%BE%83"><span class="toc-number">2.2.</span> <span class="toc-text">2.排序后比较</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E5%8D%81%E5%88%86%E4%B8%8D%E5%8F%AF%E6%80%9D%E8%AE%AE%E7%9A%84%E7%AE%97%E6%B3%95"><span class="toc-number">2.3.</span> <span class="toc-text">3.十分不可思议的算法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E7%AC%AC%E4%B8%80%E4%B8%AA%E7%89%B9%E6%80%A7%EF%BC%9A%E7%9B%B8%E5%90%8C%E4%B8%BA0%E7%9B%B8%E5%BC%82%E4%B8%BA1"><span class="toc-number">2.3.1.</span> <span class="toc-text">1.第一个特性：相同为0相异为1</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E7%AC%AC%E4%BA%8C%E4%B8%AA%E7%89%B9%E6%80%A7%EF%BC%9A-%E6%94%AF%E6%8C%81%E4%BA%A4%E6%8D%A2%E5%BE%8B"><span class="toc-number">2.3.2.</span> <span class="toc-text">2.第二个特性： 支持交换律</span></a></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%F0%9F%AB%A5acwing%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0"><span class="toc-number">1.</span> <span class="toc-text">🫥acwing基础算法笔记</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F"><span class="toc-number">1.1.</span> <span class="toc-text">1.快速排序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F"><span class="toc-number">1.2.</span> <span class="toc-text">2.归并排序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE"><span class="toc-number">1.3.</span> <span class="toc-text">3.二分查找</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E6%95%B4%E6%95%B0%E4%BA%8C%E5%88%86"><span class="toc-number">1.3.1.</span> <span class="toc-text">(1)整数二分</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%B5%AE%E7%82%B9%E6%95%B0%E4%BA%8C%E5%88%86"><span class="toc-number">1.3.2.</span> <span class="toc-text">(2)浮点数二分</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%F0%9F%90%BB%E5%89%8D%E8%A8%80"><span class="toc-number">2.</span> <span class="toc-text">🐻前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#1-%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F-1"><span class="toc-number">3.</span> <span class="toc-text">1.快速排序</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E7%AE%97%E6%B3%95%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84"><span class="toc-number">3.0.1.</span> <span class="toc-text">(1)算法基本结构</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F-1"><span class="toc-number">4.</span> <span class="toc-text">2.归并排序</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE"><span class="toc-number">5.</span> <span class="toc-text">2.二分查找</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BB%93%E8%AF%AD"><span class="toc-number">6.</span> <span class="toc-text">结语</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -373,7 +406,7 @@
   
   <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="leetcode经典题第一弹" data-title="leetcode经典题第一弹" data-url="http://yuxiaotianyu.github.io/2023/01/30/leetcode%E7%BB%8F%E5%85%B8%E9%A2%98%E7%AC%AC%E4%B8%80%E5%BC%B9/"></div>
+	<div class="ds-thread" data-thread-key="acwing基础算法笔记“" data-title="acwing基础算法笔记" data-url="http://yuxiaotianyu.github.io/2023/02/02/acwing%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E2%80%9C/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
@@ -396,8 +429,8 @@
   <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
 <script>
   var cloudTieConfig = {
-    url: "http://yuxiaotianyu.github.io/2023/01/30/leetcode%E7%BB%8F%E5%85%B8%E9%A2%98%E7%AC%AC%E4%B8%80%E5%BC%B9/", 
-    sourceId: "leetcode经典题第一弹",
+    url: "http://yuxiaotianyu.github.io/2023/02/02/acwing%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E2%80%9C/", 
+    sourceId: "acwing基础算法笔记“",
     productKey: "true",
     target: "cloud-tie-wrapper"
   };
